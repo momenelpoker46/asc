@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Cairo', sans-serif;
+}
+
+html {
+  direction: rtl;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-700 font-medium py-2 px-4 rounded-lg transition-colors duration-200 dark:bg-secondary-800 dark:hover:bg-secondary-700 dark:text-secondary-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 dark:border-secondary-600 dark:bg-secondary-800 dark:text-white;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-secondary-200 dark:bg-secondary-800 dark:border-secondary-700;
+  }
+  
+  .navbar {
+    @apply bg-white/80 backdrop-blur-md border-b border-secondary-200 dark:bg-secondary-900/80 dark:border-secondary-700;
+  }
+
+  /* Admin specific styles */
+  .input-field-admin {
+    @apply w-full bg-secondary-800 border border-secondary-700 text-white placeholder-secondary-400 rounded-lg py-2 px-3 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition;
+  }
+
+  .btn-primary-admin {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded-lg flex items-center space-x-2 space-x-reverse transition-colors;
+  }
+
+  .btn-secondary-admin {
+    @apply bg-secondary-700 hover:bg-secondary-600 text-white font-bold py-2 px-4 rounded-lg transition-colors;
+  }
+}
